@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D9ECC13D-B6DD-415B-ADAA-FAABA1958E13</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Quiz</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C80718FC220CCD6771E8E8D3090900FA613886BB</key>
+		<string>ssh://github.com/lzq420241/bignerd.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Quiz/Quiz.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C80718FC220CCD6771E8E8D3090900FA613886BB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/lzq420241/bignerd.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C80718FC220CCD6771E8E8D3090900FA613886BB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C80718FC220CCD6771E8E8D3090900FA613886BB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>bignerd</string>
+		</dict>
+	</array>
+</dict>
+</plist>
