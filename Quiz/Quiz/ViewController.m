@@ -56,6 +56,7 @@
     NSLog(@"displaying question: %@", question);
     
     // Display the string in the question field
+    [questionField sizeToFit];
     [questionField setText:question];
     
     // Clear the answer field
@@ -67,7 +68,8 @@
     // What is the answer to the current question?
     NSString *answer = [answers objectAtIndex:currentQuestionIndex];
     
-    // Display it in the answer field
-    [answerField setText:answer];
+    if ([[questionField text] length]) {
+        [answerField setText:answer];
+    }
 }
 @end
