@@ -10,12 +10,13 @@
 
 @interface BNRItem : NSObject
 {
+    // Remove these declaration will cause them only visible in BNRItem.m file.
+    // SubClasses reference will be invalid
     NSString *itemName;
     NSString *serialNumber;
     int valueInDollars;
     NSDate *dateCreated;
 }
-
 
 + (id)randomItem;
 

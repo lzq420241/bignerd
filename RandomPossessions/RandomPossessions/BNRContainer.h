@@ -9,11 +9,6 @@
 #import "BNRItem.h"
 
 @interface BNRContainer : BNRItem
-{
-    NSArray *subItems;
-    int containerValue;
-    int reportIndentation;
-}
 
 + (NSString *)tabs:(int)tab_cnt;
 
