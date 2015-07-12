@@ -9,6 +9,7 @@
 #import "BNRContainer.h"
 
 @implementation BNRContainer
+@synthesize subItems, containerValue, reportIndentation;
 
 + (NSString *)tabs:(int)tab_cnt
 {
@@ -55,33 +56,6 @@
                   containerName:@"Container"
                  containerValue:3
                conntainerNumber:randomSerialNumber];
-}
-
-- (NSArray *)subItems
-{
-    return subItems;
-}
-- (void)setSubItems: (NSArray *)items
-{
-    subItems = items;
-}
-
-- (int)containerValue
-{
-    return containerValue;
-}
-- (void)setContainerValue: (int)cValue
-{
-    containerValue = cValue;
-}
-
-- (int)reportIndentation
-{
-    return reportIndentation;
-}
-- (void)setReportIndentation:(int)rInd
-{
-    reportIndentation = rInd;
 }
 
 // valueInDollars must be used as totalValue,

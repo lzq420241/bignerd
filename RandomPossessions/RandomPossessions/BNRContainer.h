@@ -22,14 +22,8 @@
       containerValue: (int)cValue
     conntainerNumber: (NSString *)cSNumber;
 
-- (NSArray *)subItems;
-- (void)setSubItems: (NSArray *)items;
-
-- (int)containerValue;
-- (void)setContainerValue: (int)cValue;
-
-- (int)reportIndentation;
-- (void)setReportIndentation: (int)rInd;
-
+@property (nonatomic, strong) NSArray *subItems;
+@property (nonatomic) int containerValue;
+@property (nonatomic) int reportIndentation;
 
 @end

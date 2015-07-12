@@ -9,6 +9,7 @@
 #import "BNRItem.h"
 
 @implementation BNRItem
+@synthesize itemName, serialNumber, valueInDollars, dateCreated;
 
 + (id)randomItem
 {
@@ -69,38 +70,6 @@
     return [self initWithItemName:@"Item"
                    valueInDollars:0
                      serialNumber:@""];
-}
-
-- (void)setItemName:(NSString *)str
-{
-    itemName = str;
-}
-- (NSString *)itemName
-{
-    return itemName;
-}
-
-- (void)setSerialNumber:(NSString *)str
-{
-    serialNumber = str;
-}
-- (NSString *)serialNumber
-{
-    return serialNumber;
-}
-
-- (void)setValueInDollars:(int)i
-{
-    valueInDollars = i;
-}
-- (int)valueInDollars
-{
-    return valueInDollars;
-}
-
-- (NSDate *)dateCreated
-{
-    return  dateCreated;
 }
 
 - (NSString *)description

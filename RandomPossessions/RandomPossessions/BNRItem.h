@@ -16,6 +16,7 @@
     NSDate *dateCreated;
 }
 
+
 + (id)randomItem;
 
 - (id)initWithItemName: (NSString *)name
@@ -25,14 +26,9 @@
 - (id)initWithItemName: (NSString *)name
           serialNumber: (NSString *)sNumber;
 
-- (void)setItemName:(NSString *)str;
-- (NSString *)itemName;
+@property (nonatomic, strong) NSString *itemName;
+@property (nonatomic, strong) NSString *serialNumber;
+@property (nonatomic) int valueInDollars;
+@property (nonatomic, readonly, strong) NSDate *dateCreated;
 
-- (void)setSerialNumber:(NSString *)str;
-- (NSString *)serialNumber;
-
-- (void)setValueInDollars:(int)i;
-- (int)valueInDollars;
-
-- (NSDate *)dateCreated;
 @end
