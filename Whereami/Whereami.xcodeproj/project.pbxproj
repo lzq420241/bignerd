@@ -14,6 +14,8 @@
 		158401231B5280C4003A8704 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158401221B5280C4003A8704 /* Images.xcassets */; };
 		158401261B5280C4003A8704 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 158401241B5280C4003A8704 /* LaunchScreen.xib */; };
 		158401321B5280C4003A8704 /* WhereamiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 158401311B5280C4003A8704 /* WhereamiTests.m */; };
+		15B99FDE1B5A38CF005ECFA2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B99FDD1B5A38CF005ECFA2 /* MapKit.framework */; };
+		15B99FE11B5A7658005ECFA2 /* BNRMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B99FE01B5A7658005ECFA2 /* BNRMapPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		1584012B1B5280C4003A8704 /* WhereamiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereamiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		158401301B5280C4003A8704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		158401311B5280C4003A8704 /* WhereamiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiTests.m; sourceTree = "<group>"; };
+		15B99FDD1B5A38CF005ECFA2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		15B99FDF1B5A7658005ECFA2 /* BNRMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRMapPoint.h; sourceTree = "<group>"; };
+		15B99FE01B5A7658005ECFA2 /* BNRMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRMapPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B99FDE1B5A38CF005ECFA2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		158401091B5280C4003A8704 = {
 			isa = PBXGroup;
 			children = (
+				15B99FDD1B5A38CF005ECFA2 /* MapKit.framework */,
 				158401141B5280C4003A8704 /* Whereami */,
 				1584012E1B5280C4003A8704 /* WhereamiTests */,
 				158401131B5280C4003A8704 /* Products */,
@@ -85,6 +92,8 @@
 				1584011A1B5280C4003A8704 /* AppDelegate.m */,
 				1584011C1B5280C4003A8704 /* ViewController.h */,
 				1584011D1B5280C4003A8704 /* ViewController.m */,
+				15B99FDF1B5A7658005ECFA2 /* BNRMapPoint.h */,
+				15B99FE01B5A7658005ECFA2 /* BNRMapPoint.m */,
 				1584011F1B5280C4003A8704 /* Main.storyboard */,
 				158401221B5280C4003A8704 /* Images.xcassets */,
 				158401241B5280C4003A8704 /* LaunchScreen.xib */,
@@ -221,6 +230,7 @@
 			files = (
 				1584011E1B5280C4003A8704 /* ViewController.m in Sources */,
 				1584011B1B5280C4003A8704 /* AppDelegate.m in Sources */,
+				15B99FE11B5A7658005ECFA2 /* BNRMapPoint.m in Sources */,
 				158401181B5280C4003A8704 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +426,7 @@
 				158401371B5280C4003A8704 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		158401381B5280C4003A8704 /* Build configuration list for PBXNativeTarget "WhereamiTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +435,7 @@
 				1584013A1B5280C4003A8704 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
