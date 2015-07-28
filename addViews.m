@@ -22,7 +22,7 @@ options:0 metrics:nil views:viewsDictionary]];
 constraintsWithVisualFormat:@"V:|-[removeButton]"
 options:0 metrics:nil views:viewsDictionary]];
      [self.view addConstraints:[NSLayoutConstraint
-constraintsWithVisualFormat:@V:|-[clearButton]"
+constraintsWithVisualFormat:@"V:|-[clearButton]"
 options:0 metrics:nil views:viewsDictionary]];
 }
 
