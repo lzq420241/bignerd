@@ -1,29 +1,61 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.addButton = [self addButtonWithTitle:@"Add" action:@selector(addImageView)];
-    self.removeButton = [self addButtonWithTitle:@"Remove" action:@selector(removeImageView)];
-    self.clearButton = [self addButtonWithTitle:@"Clear" action:@selector(clearImageViews)];
+    UIButton *addButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [addButton setTitle:@"Add" forState:UIControlStateNormal];
+    addButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:addButton];
 
-     NSDictionary *viewsDictionary =
-[[NSDictionary alloc] initWithObjectsAndKeys:
-self.addButton, @"addButton",
-self.removeButton, @"removeButton",
-self.clearButton, @"clearButton", nil];
+    UIButton *removeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [removeButton setTitle:@"Remove" forState:UIControlStateNormal];
+    removeButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:removeButton];
 
-     [self.view addConstraints:[NSLayoutConstraint
-constraintsWithVisualFormat:@"H:|-[addButton]-[removeButton]-[clearButton]"
-options:0 metrics:nil views:viewsDictionary]];
+    UIButton *clearButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [clearButton setTitle:@"Clear" forState:UIControlStateNormal];
+    clearButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:clearButton];
 
-     [self.view addConstraints:[NSLayoutConstraint
-constraintsWithVisualFormat:@"V:|-[addButton]"
-options:0 metrics:nil views:viewsDictionary]];
-     [self.view addConstraints:[NSLayoutConstraint
-constraintsWithVisualFormat:@"V:|-[removeButton]"
-options:0 metrics:nil views:viewsDictionary]];
-     [self.view addConstraints:[NSLayoutConstraint
-constraintsWithVisualFormat:@"V:|-[clearButton]"
-options:0 metrics:nil views:viewsDictionary]];
+    NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(addButton, removeButton, clearButton);
+
+    [self.view addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[addButton]" options:0 metrics:nil
+views:viewsDictionary]];
+    [self.view addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[removeButton]" options:0 metrics:nil
+views:viewsDictionary]];
+    [self.view addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[clearButton]" options:0 metrics:nil
+views:viewsDictionary]];
+
+    [self.view addConstraints:[NSLayoutConstraint
+       constraintsWithVisualFormat:@" [addButton(<=100)]-[removeButton(==addButton)]-[clearButton(==addButton)]"
+       options:0 metrics:nil views:viewsDictionary]];
+
+   NSLayoutConstraint *pinToLeft = [NSLayoutConstraint
+        constraintWithItem:addButton attribute:NSLayoutAttributeLeading
+        relatedBy:NSLayoutRelationEqual
+        toItem:self.view attribute:NSLayoutAttributeLeading
+        multiplier:1 constant:20];
+   pinToLeft.priority = 500;
+   [self.view addConstraint:pinToLeft];
+
+
+   NSLayoutConstraint *pinToRight = [NSLayoutConstraint
+       constraintWithItem:clearButton attribute:NSLayoutAttributeTrailing
+       relatedBy:NSLayoutRelationEqual
+       toItem:self.view attribute:NSLayoutAttributeTrailing
+       multiplier:1 constant:20];
+   pinToRight.priority = 500;
+   [self.view addConstraint:pinToRight];
+
+
+   NSLayoutConstraint *center = [NSLayoutConstraint
+      constraintWithItem:removeButton attribute:NSLayoutAttributeCenterX
+      relatedBy:NSLayoutRelationEqual
+      toItem:self.view attribute:NSLayoutAttributeCenterX
+      multiplier:1 constant:0];
+   [self.view addConstraint:center];
 }
 
 - (void)rebuildImageViewsConstraints
